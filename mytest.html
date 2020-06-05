@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type="text/css">
+        .block1 {
+            margin-top: 30px;
+            margin-left: 155px;
+            width: 880px;
+            border-width: 1px;
+            border-color: rgb(190,190,190);
+            border-style: solid;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        .block2 {
+            margin-top: 30px;
+            margin-left: 155px;
+            width: 880px;
+            border-width: 0px;
+            border-color: rgb(190,190,190);
+            border-style: solid;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        .field {
+            clear:both;
+            text-align: right;
+            line-height: 20px;
+            font-family: Arial;
+            font-size: 18pt;
+            color: rgb(190,190,190);
+            padding: 15px;
+        }
+        .field2 {
+
+            text-align: left;
+            line-height: 20px;
+            font-family: Arial;
+            font-size: 14pt;
+            color: rgb(190,190,190);
+            padding: 15px;
+        }
+        label{
+            font-family: Arial;
+            font-style: solid;
+            font-size: 14pt;
+            color: rgb(187, 178, 178);
+            padding-right:30px;
+            }
+        input{
+            text-align: right;
+        }
+        .znak1 {
+            text-align: right;
+            font-size: 20pt;
+            font-family: Arial;
+            color: rgb(4, 8, 8);
+            padding-right: 25px;
+        }
+        .znak2 {
+            text-align: right;
+            font-size: 18pt;
+            font-family: Arial;
+            color: rgb(4, 8, 8);
+            padding-right: 25px;
+        }
+        :focus {
+            outline: none;
+            outline-offset: 0;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="block1">
+        <div class="field">
+            <div style="text-align: left"><b> Вычитание длинных чисел </b></div></div>
+        <div class="field">
+            <label>Первое число</label>
+                <input type="text" name="in1" id="in1" value="" size="100" maxlength="256" min="0" step="1"
+                       onkeyup="difference()" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
+                <div class="znak1">
+                    <b>-</b></div>
+            <div class="field">
+                <label>Второе число</label>
+                <input type="text" name="in2" id="in2" value="" size="100" maxlength="256" min="0" step="1"
+                       onkeyup="difference()"r oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
+                <div class="znak2">
+                    <b>=</b></div>
+                <div class="field">
+                    <label>Результат</label>
+                    <input type="text" id="res" name="res" size="100" value="" readonly maxlength="256"
+                    tabindex="-1"></div></div>
+    <div class="block2">
+    <div class="field2">
+        <div><b></b>Инструкция.<b></b></div>
+        <div><p>1. Установите курсор в поле "Первое число", с клавиатуры введите целое положительное число
+            (максимум 256 знаков).</p></div>
+        <div><p>2. Установите курсор в поле "Второе число", с клавиатуры введите целое положительное число
+            (максимум 256 знаков).</p></div>
+        <div><p>3. Результат вычислений отобразится в поле "Результат".</p></div>
+</form>
+<script src="mytest.js"></script>
+</body>
+</html>
